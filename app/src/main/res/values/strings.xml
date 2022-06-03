@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MvvmNoteProject</string>
+    <string name="home">메인</string>
+    <string name="food">냉장고</string>
+    <string name="setting">설정</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="date_format">%d/%d/%d</string>
+
+</resources>

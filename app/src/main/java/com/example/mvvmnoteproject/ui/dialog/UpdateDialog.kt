@@ -10,13 +10,17 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.mvvmnoteproject.R
+import com.example.mvvmnoteproject.model.Memo
 
 
-class UpdateDialog(context : Context, updateDialogInterface: UpdateDialogInterface) : Dialog(context) {
+class UpdateDialog(context : Context,
+                   updateDialogInterface: UpdateDialogInterface,
+                    memo : Memo
+) : Dialog(context) {
 
     // 액티비티에서 인터페이스를 받아옴
     private var updateDialogInterface : UpdateDialogInterface = updateDialogInterface
-
+    private var mMemo : Memo = memo
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_custom_dialog)
@@ -25,6 +29,7 @@ class UpdateDialog(context : Context, updateDialogInterface: UpdateDialogInterfa
         var cancelButton : Button = findViewById(R.id.cancelButton)
         var memoEditView : EditText = findViewById(R.id.memoEditView)
 
+        memoEditView.setText(mMemo.content)
         // 배경 투명하게 바꿔줌
         window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 

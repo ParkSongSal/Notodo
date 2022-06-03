@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         })
         callFragment(Constants.FRAGMENT1)
 
-
     }
 
     // 선택한 Fragment 호출

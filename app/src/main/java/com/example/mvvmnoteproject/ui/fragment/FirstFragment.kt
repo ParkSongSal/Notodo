@@ -23,7 +23,7 @@ class FirstFragment : Fragment(), MyCustomDialogInterface {
 
     private var binding : FragmentFirstBinding? = null
     private val memoViewModel: MemoViewModel by viewModels() // 뷰모델 연결
-    private val adapter : TodoAdapter by lazy { TodoAdapter(memoViewModel) } // 어댑터 선언
+    private val adapter : TodoAdapter by lazy { TodoAdapter(memoViewModel, requireContext()) } // 어댑터 선언
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
